@@ -41,7 +41,6 @@
     "precommit-hook": "~3.0.0",
     "rimraf": "~2.4.2",
     "should": "~7.0.4",
-    "rc-server": "~3.x",
     "silo-tools": "*"
   },
   "config": {

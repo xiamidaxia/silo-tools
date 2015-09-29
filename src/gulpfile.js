@@ -21,8 +21,16 @@ gulp.task('init-backend', function() {
   writeFiles('server')
 })
 
-gulp.task('server', function() {
-  startServer()
+gulp.task('server', function(done) {
+  const app = require('rc-server')()
+  const pack = require(path.join(process.cwd(), 'package.json'))
+  if (pack && pack.config && pack.config.port) {
+    return app.listen(pack.config.port, function() {
+      console.log('start server at port:', pack.config.port)
+      done()
+    })
+  }
+  throw new Error('server need a port.')
 })
 
 gulp.task('build', ['_cleanBuild'], function(done) {
