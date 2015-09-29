@@ -30,7 +30,7 @@ module.exports = function() {
       plugins: webpackConf.plugins,
     },
     coverageReporter: {
-      type: 'html',
+      type: 'text',
       dir: path.join(cwd, 'coverage/'),
     },
     webpackServer: {

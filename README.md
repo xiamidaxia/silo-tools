@@ -14,9 +14,9 @@
 
 silo init myProject  初始化项目
 
-silo server 运行本地服务器
+npm install
 
-sudo silo karma 开始跑测试
+npm start 运行本地服务器
 
 ```
 
@@ -30,14 +30,15 @@ sudo silo karma 开始跑测试
 
 ### 如何运行测试
 
-- 非前端项目: 运行 `npm run test`
-- 前端项目: 运行 `sudo npm run karma` 或者 `sudo silo karma`
+- 运行 `npm run test`
 
 ### 如何运行测试覆盖率
 
-- 非前端项目：运行 `npm run test:cov`
+- 运行 `npm run test:cov`
 
-- 前端项目: 运行 `sudo silo karma` 查看 coverage 文件夹
+### 运行karma多浏览器测试
+
+- 运行 `npm run karma`
 
 ### 更多命令
 

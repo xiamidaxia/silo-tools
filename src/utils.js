@@ -1,13 +1,11 @@
 const path = require('path')
 
 function startServer(cb) {
-  const server = require('./server')
-  server.listen(server.port, 'localhost', function(err) {
-    if (err) {
-      throw err
-    }
-    console.log('Listening at localhost:' + server.port)
-    cb && cb(server)
+  const app = require('rc-server')()
+  app.listen(function listen() {
+    const port = this.address().port
+    console.log('start server at port:', port)
+    cb && cb.call(this, port)
   })
 }
 
