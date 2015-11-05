@@ -17,7 +17,7 @@ const argv = process.argv.slice(3)
 gulp.task('init', function() {
   writeFiles('client')
 })
-gulp.task('init-backend', function() {
+gulp.task('initServer', function() {
   writeFiles('server')
 })
 

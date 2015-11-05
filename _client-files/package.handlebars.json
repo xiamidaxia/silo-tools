@@ -5,17 +5,17 @@
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
   "scripts": {
-    "start": "silo server",
-    "clean": "rimraf coverage doc lib dist",
+    "start": "rc-server",
     "len:src": "./len.sh ./src",
     "len:all": "./len.sh ./src ./test ./examples",
     "lint": "node node_modules/.bin/eslint .",
-    "test": "silo browser-test",
-    "test:cov": "silo browser-test-cov",
-    "build:doc": "esdoc -c esdoc.json",
-    "build:lib": "babel src --optional es7.decorators --out-dir lib",
-    "build:dist": "silo build",
-    "build": "npm run clean && npm run build:lib && npm run build:dist"
+    "pub": "rc-tools run pub",
+    "gh-pages": "rc-tools run gh-pages",
+    "karma": "rc-tools run karma",
+    "saucelabs": "rc-tools run saucelabs",
+    "test": "rc-tools run browser-test",
+    "test:cover": "rc-tools run browser-test-cover",
+    "build": "rc-tools run build"
   },
   "repository": {
   },
@@ -41,13 +41,11 @@
     "precommit-hook": "~3.0.0",
     "rimraf": "~2.4.2",
     "should": "~7.0.4",
-    "silo-tools": "*"
+    "rc-server": "3.x",
+    "rc-tools": "4.x"
   },
   "config": {
     "port": 8000
-  },
-  "engines": {
-    "alinode-iojs": "2.3.4"
   },
   "dependencies": {
     "object-assign": "~3.0.0",

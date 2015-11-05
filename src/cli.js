@@ -13,7 +13,7 @@ program
     console.log('  Usage:'.to.bold.blue.color)
     console.log()
     console.log('    $', 'silo init [projectName]'.to.magenta.color, ' 初始化react项目, 包含karma')
-    console.log('    $', 'silo init-backend [projectName]'.to.magenta.color, ' 初始化服务端项目, 没有karma')
+    console.log('    $', 'silo initServer [projectName]'.to.magenta.color, ' 初始化服务端项目, 没有karma')
     console.log('    $', 'silo server'.to.magenta.color, ' 快速运行本地服务器')
     console.log('    $', 'silo build'.to.magenta.color, ' 运行webpack build')
     console.log('    $', 'silo karma'.to.magenta.color, ' 启动karma测试服务器')
