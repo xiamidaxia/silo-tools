@@ -25,6 +25,7 @@
   "license": "MIT",
   "pre-commit": [
     "lint",
+    "test",
     "build"
   ],
   "devDependencies": {
@@ -43,6 +44,9 @@
     "should": "~7.0.4",
     "rc-server": "3.x",
     "rc-tools": "4.x"
+  },
+  "engines": {
+    "install-node": "5.0.0"
   },
   "config": {
     "port": 8000
