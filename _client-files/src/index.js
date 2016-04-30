@@ -1,1 +1,1 @@
-require('./index.less')
+console.log('Hello World!');

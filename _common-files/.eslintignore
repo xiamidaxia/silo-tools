@@ -1,7 +1,9 @@
-dist
-doc
-lib
-coverage
-examples
-node_module
-build
+app/proxy*
+node_modules/
+test/fixtures
+fntest/
+dist/
+lib/
+build/
+coverage/
+mocks/

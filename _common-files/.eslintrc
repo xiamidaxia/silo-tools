@@ -1,40 +1,33 @@
 {
   "extends": "eslint-config-airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "strict": 0
+  },
   "env": {
     "browser": true,
     "mocha": true,
-    "node": true
+    "node": true,
+    "es6": true
+  },
+  "ecmaFeatures": {
+    "generators": true,
+    "objectLiteralDuplicateProperties": true,
+    "experimentalObjectRestSpread": true
   },
   "rules": {
+    "strict": 0,
+    "func-names": 0,
+    "default-case": 0,
+    "no-param-reassign": 0,
+    "no-shadow": 0,
+    "no-console": 2,
     "valid-jsdoc": [2, {
       "requireReturn": false,
       "requireParamDescription": false,
       "requireReturnDescription": false
     }],
-    "guard-for-in": 0,
-    "default-case": 0,
-    "new-cap": 0,
-    "id-length": 0,
-    "react/jsx-uses-react": 2,
-    "react/jsx-uses-vars": 2,
-    "react/react-in-jsx-scope": 2,
-    "react/wrap-multilines": 0,
-    "react/prop-types": 0,
-    "react/sort-comp": 0,
-    "no-use-before-define": [2, "nofunc"],
-    "eol-last": 0,
-    "indent": [2, 2, {"SwitchCase": 1}],
-    "no-param-reassign": 0,
-    "func-names": 0,
-    //Temporarirly disabled due to a possible bug in babel-eslint (todomvc example)
-    //"block-scoped-var": 0,
-    // Temporarily disabled for test/* until babel/babel-eslint#33 is resolved
-    //"padded-blocks": 0,
-    "semi": [2, "never"]
-  },
-  "plugins": [
-    //"react"
-  ],
-  "ecmaFeatures": {
+    "generator-star-spacing": [2, {"before": false, "after": true}],
+    "require-yield": 2
   }
 }
