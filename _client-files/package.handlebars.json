@@ -1,11 +1,11 @@
 {
-  "name": "{{name}}",
+  "name": "",
   "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "start": "electron ./main.js",
-    "server": "webpack-dev-server",
+    "start": "webpack-dev-server",
+    "electron": "electron ./main.js",
     "build": "make build",
     "test": "make test",
     "test:watch": "make test-watch",
@@ -21,10 +21,10 @@
   "author": "xiamidaxia@icloud.com",
   "license": "ISC",
   "dependencies": {
-    "react": "^15.0.2",
-    "react-dom": "^15.0.2"
   },
   "devDependencies": {
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
     "babel-cli": "^6.7.7",
     "babel-core": "^6.7.7",
     "babel-eslint": "^6.0.4",

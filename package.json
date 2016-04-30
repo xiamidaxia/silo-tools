@@ -12,8 +12,6 @@
   "author": "xiamidaxia@icloud.com",
   "license": "MIT",
   "pre-commit": [
-    "lint",
-    "build"
   ],
   "bin": {
     "silo": "./bin/silo"
