@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import './index.less';
-
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import './index.less'
 export default class Main extends Component {
   static propTypes = {
   }
@@ -10,7 +9,7 @@ export default class Main extends Component {
       <div className="container">
         Hello World!
       </div>
-    );
+    )
   }
 }
 
