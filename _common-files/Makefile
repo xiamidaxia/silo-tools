@@ -4,7 +4,7 @@ MOCHA_ARGS= --compilers js:babel-register \
 		--recursive \
     --require babel-polyfill
 
-MOCHA_TARGET=src/__tests__/setup.js src/**/__tests__/**/*.spec.js
+MOCHA_TARGET=src/**/__tests__/**/*.spec.js
 
 build: clean
 	$(BIN)/babel src  --ignore __tests__ --out-dir lib
