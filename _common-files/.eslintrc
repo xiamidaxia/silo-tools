@@ -18,15 +18,11 @@
   "rules": {
     "strict": 0,
     "semi": [2, "never"],
-    "func-names": 0,
     "default-case": 0,
-    "no-param-reassign": 0,
-    "no-shadow": 0,
-    "no-console": 2,
     "valid-jsdoc": [2, {
       "requireReturn": false,
-      "requireParamDescription": false,
-      "requireReturnDescription": false
+      "requireParamDescription": true,
+      "requireReturnDescription": true
     }],
     "generator-star-spacing": [2, {"before": false, "after": true}],
     "require-yield": 2
