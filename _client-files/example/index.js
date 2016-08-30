@@ -13,5 +13,4 @@ export default class Main extends Component {
   }
 }
 
-ReactDOM.render(<Main />, document.getElementById('__content'));
-
+ReactDOM.render(<Main />, document.getElementById('__content'))
