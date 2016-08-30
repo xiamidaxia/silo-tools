@@ -2,7 +2,6 @@ BIN=node_modules/.bin
 
 MOCHA_ARGS= --compilers js:babel-register \
 		--recursive \
-    --require babel-polyfill
 
 MOCHA_TARGET=src/**/__tests__/**/*.spec.js
 
