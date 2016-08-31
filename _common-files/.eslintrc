@@ -1,9 +1,6 @@
 {
   "extends": "eslint-config-airbnb",
   "parser": "babel-eslint",
-  "rules": {
-    "strict": 0
-  },
   "env": {
     "browser": true,
     "mocha": true,
