@@ -1,6 +1,6 @@
 BIN=node_modules/.bin
 
-TEST_TARGET= --testPathPattern .spec.js
+TEST_TARGET= --testPathPattern .*\.spec\.js
 
 build: clean
 	$(BIN)/babel src  --ignore __tests__ --out-dir lib
