@@ -1,55 +1,77 @@
 const webpack = require('webpack')
 const path = require('path')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const rucksack = require('rucksack-css')
+const autoprefixer = require('autoprefixer')
+const postcssOptions = {
+  plugins: [
+    rucksack(),
+    autoprefixer({
+      browsers: ['last 2 versions', 'Firefox ESR', '> 1%', 'ie >= 8'],
+    }),
+  ],
+}
 
 module.exports = {
   context: path.join(__dirname, './example'),
   entry: {
-    jsx: './index.js',
-    html: './index.html',
-    vendor: [
+    index: './index.js',
+    common: [
       'react',
       'react-dom',
     ],
   },
   output: {
     path: path.join(__dirname, './dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.html$/,
-        loader: 'file?name=[name].[ext]',
+        loader: 'file-loader?name=[name].[ext]',
       },
       {
         test: /\.less$/,
-        loaders: [
-          'style-loader',
-          'css-loader?modules&camelCase&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-          'less-loader',
-        ],
+        loader: ExtractTextPlugin.extract({
+            use: [
+              'css-loader',
+              {
+                loader: 'postcss-loader',
+                options: postcssOptions
+              },
+              'less-loader'
+            ],
+          }
+        ),
       },
       {
         test: /\.css$/,
-        loader: 'style!css',
+        loader: ExtractTextPlugin.extract('css-loader?sourceMap&-restructuring!postcss'),
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loaders: [
-          'react-hot',
+          'react-hot-loader',
           'babel-loader',
         ],
       },
     ],
   },
-  resolve: {
-    extensions: ['', '.js', '.jsx'],
-  },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
+    new webpack.optimize.CommonsChunkPlugin({ name: 'common', filename: 'common.js' }),
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development') },
+    }),
+    new ExtractTextPlugin({
+      filename: '[name].css',
+      disable: false,
+      allChunks: true,
     }),
   ],
   devServer: {
