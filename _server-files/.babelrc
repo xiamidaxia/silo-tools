@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "react",
+    [ "env", {
+      "targets": {
+        "node": "current"
+      },
+      "useBuiltIns": "usage",
+      "debug": true
+    }]
+  ],
+  "plugins": [
+    "transform-decorators-legacy"
+  ]
+}
