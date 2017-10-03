@@ -115,7 +115,7 @@ function mergePackageJSON(oldJson, newJson) {
   return oldJson
 }
 function _writeFiles(dir, _cwd) {
-  const appname = argv[0] || ''
+  const appname = argv[0] || _cwd.split('/').reverse()[0]
   fs.readdirSync(dir).map(function(filename) {
     const file = path.join(dir, filename)
     let targetFile = path.join(_cwd, filename)
