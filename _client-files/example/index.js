@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import './index.less'
+
+/* eslint-disable */
 export default class Main extends Component {
   static propTypes = {
   }

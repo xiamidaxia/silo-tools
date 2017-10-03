@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "{{appname}}",
   "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
@@ -9,6 +9,7 @@
     "test:watch": "make test-watch",
     "test:cover": "make test-cover",
     "prepublish": "make build",
+    "autod": "autod",
     "lint": "make lint"
   },
   "repository": {
@@ -40,17 +41,8 @@
     "eslint-plugin-markdown": "*",
     "eslint-plugin-react": "^6.1.2",
     "mocha": "^2.5.3",
+    "autod": "^2.9.0",
     "pre-commit": "^1.1.2"
-  },
-  "babel": {
-    "presets": [
-      "es2015",
-      "stage-0"
-    ],
-    "plugins": [
-      "transform-runtime",
-      "transform-decorators-legacy"
-    ]
   },
   "pre-commit": [
     "lint",
