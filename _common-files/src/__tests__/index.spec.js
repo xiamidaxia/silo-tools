@@ -1,7 +1,7 @@
-import { expect } from 'chai'
+import expect from 'expect'
 
 describe('index', () => {
   it('should ...', () => {
-    expect(true).to.eql(true)
+    expect(true).toBe(true)
   })
 })
