@@ -5,8 +5,7 @@
       "targets": {
         "ie": 9
       },
-      "useBuiltIns": "usage",
-      "debug": true
+      "useBuiltIns": "usage"
     }]
   ],
   "plugins": [
