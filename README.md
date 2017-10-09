@@ -16,7 +16,7 @@ $ mkdir myProject
 
 $ cd myProject
 
-$ silo init  初始化项目
+$ silo init
 
 ```
 

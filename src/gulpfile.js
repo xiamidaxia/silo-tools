@@ -127,7 +127,7 @@ function _writeFiles(dir, _cwd) {
     }
     let content = fs.readFileSync(file).toString()
     if (/\.handlebars/.test(filename)) {
-      content = handlebars.compile(content)({appname})
+      content = handlebars.compile(content)({appname, group: 'yourGroupName'})
       filename = filename.replace(/\.handlebars/, '')
       targetFile = path.join(_cwd, filename)
     }
