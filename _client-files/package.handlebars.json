@@ -23,7 +23,7 @@
     "index": "./src/index.js"
   },
   "keywords": [],
-  "author": "xiamidaxia@icloud.com",
+  "author": "xiamidaxia <xiamidaxia@icloud.com>",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
